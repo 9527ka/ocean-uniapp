@@ -128,7 +128,7 @@
 	
 	
 	"acc.inv": "Invitation Code:",
-	"acc.invi": "Inviter: ",
+	"acc.invi": "Invite partners: ",
 	"acc.team": "My Team",
 	"acc.title": "My Title",
 	"acc.card": "My Card",
@@ -166,11 +166,11 @@
 	"acc.title4": "Invite Partners",
 	"acc.title5": "Total Points",
 	"acc.title6": "Role",
-	"acc.title7": "1.Protector - Bronze, requires 0-60 points, and you can enjoy a 9.2% discount.",
-	"acc.title8": "2.Protector - Silver, requires 61-120 points, and you can enjoy a 9.1% discount.",
-	"acc.title9": "3.Protector - Gold, requires 121-180 points, and you can enjoy a 9.0% discount.",
-	"acc.title10": "4.Protector - Diamond, requires 181-240 points, and you can enjoy an 8.9% discount.",
-	"acc.title11": "5.Protector - Supreme, requires 241 points or above, and you can enjoy an 8.8% discount.",
+	"acc.title7": "1.Protector - Bronze, requires 0-600 points, and you can enjoy a 9.2% discount.",
+	"acc.title8": "2.Protector - Silver, requires 601-1200 points, and you can enjoy a 9.1% discount.",
+	"acc.title9": "3.Protector - Gold, requires 1201-1800 points, and you can enjoy a 9.0% discount.",
+	"acc.title10": "4.Protector - Diamond, requires 1801-2400 points, and you can enjoy an 8.9% discount.",
+	"acc.title11": "5.Protector - Supreme, requires 2401 points or above, and you can enjoy an 8.8% discount.",
 	"acc.v1": "Version Description",
 	"acc.v2": "Version number",
 	

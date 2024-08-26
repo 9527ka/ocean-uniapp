@@ -1,4 +1,7 @@
 <script>
+	import Vue from 'vue'
+	import Webto from '@/components/Webto.vue'
+	Vue.component('Webto', Webto) // 全局注册组件
 	export default {
 		// onLaunch: function() {
 		// 	console.log('App Launch')
@@ -327,4 +330,30 @@ body{
 	}
 }
 
+
+
+.x{
+	width: 26.39rpx;
+	height: 26.39rpx;
+}
+.f{
+	width: 32.64rpx;
+	height: 32.64rpx;
+}
+.y{
+	width: 38.89rpx;
+	height: 27.78rpx;
+}
+.i{
+	width: 33.33rpx;
+	height: 32.64rpx;
+}
+.d{
+	width: 27.08rpx;
+	height: 31.25rpx;
+}
+.z{
+	width: 57.64rpx;
+	height: 20.83rpx;
+}
 </style>

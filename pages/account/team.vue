@@ -65,13 +65,13 @@
 				LevelList: [],
 				
 				User: {},
-				code: '/pages/login/reg?icode=5HDRF7'
+				code: ''
 			};
 		},
 		onLoad() {
 			this.getLevel()
 			this.User = uni.getStorageSync('User')
-			this.code = BASE_URL +'#/pages/login/register?code='+ this.User.icode
+			this.code = BASE_URL +'#/pages/login/reg?code='+ this.User.icode
 		},
 		methods: {
 			getLevel(){
@@ -140,7 +140,7 @@
 			background: #102455;
 			border-radius: 13.89rpx;
 			padding: 0 24rpx;
-			font-size: 30rpx;
+			font-size: 20rpx;
 			text-align: center;
 		}
 	}

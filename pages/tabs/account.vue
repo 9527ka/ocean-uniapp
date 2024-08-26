@@ -3,7 +3,7 @@
 		<view class="accpage">
 			<view class="accpage_title">
 				<view  class="accpage_title_le flex">
-					<image :src="User.avatar ? User.avatar : require('../../static/my/toux.png')" mode=""></image>
+					<image @click="onUpload" :src="User.avatar ? User.avatar : require('../../static/my/toux.png')" mode=""></image>
 					<view>{{ User.account ? User.account : $t('login')}}</view>
 				</view>
 				<view class="accpage_title_ri flex">
@@ -90,7 +90,7 @@
 </template>
 
 <script>
-	import { request } from '@/api/index';
+	import { request, uploadImage } from '@/api/index';
 	export default {
 		data() {
 			return {
@@ -118,6 +118,37 @@
 				await request('user/info', 'GET').then(res=>{
 					this.User = res.data.data
 					uni.setStorageSync('User', res.data.data);
+				})
+			},
+			onUpload(){
+				uni.chooseImage({
+					count: 1,
+					success: (res) => {
+						const file = res.tempFilePaths
+						file.forEach((filePath) => {
+							this.uploadImg(filePath);
+						});
+					},
+					fail: () => {
+						uni.showToast({
+							title: this.$t('sel'),
+							icon: 'none',
+							duration: 2000
+						});
+					}
+				})
+			},
+			//
+			uploadImg(filePath) {
+				let that = this
+				uploadImage(filePath).then(res=>{
+					// res.data.uri
+					request('user/setInfo', 'POST', {
+						field: 'avatar',
+						value: res.data.uri
+					}).then(res=>{
+						that.getUser()
+					})
 				})
 			},
 			toUser(){
@@ -152,6 +183,9 @@
 				width: 153.47rpx;
 				height: 153.47rpx;
 				margin-right: 37.5rpx;
+				border: 1rpx solid #121947;
+				border-radius: 50%;
+				overflow: hidden;
 			}
 		}
 		.accpage_title_ri{

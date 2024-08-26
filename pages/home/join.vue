@@ -19,10 +19,7 @@
 				<text>{{ $t('home.home')}}</text>  {{ $t('home.join1')}}
 			</view>
 			<view class="about_app flex">
-				<image src="../../static/index/x.png" mode=""></image>
-				<image src="../../static/index/d.png" mode=""></image>
-				<image src="../../static/index/f.png" mode=""></image>
-				<image src="../../static/index/y.png" mode=""></image>
+				<Webto />
 			</view>
 			
 			<!-- <view class="join_tel">
@@ -166,7 +163,7 @@
 		methods: {
 			goSignUp(){
 				uni.navigateTo({
-					url: '/pages/login/register'
+					url: '/pages/login/reg'
 				});
 			},
 			handleScroll(e) {
@@ -224,10 +221,9 @@
 	.about_app{
 		align-items: center;
 		justify-content: flex-end;
+		padding: 10rpx 0;
 		image{
-			width: 26.39rpx;
-			height: 26.39rpx;
-			margin-left: 15rpx;
+			margin-left: 30rpx;
 		}
 	}
 	.about_text_p{

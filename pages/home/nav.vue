@@ -25,12 +25,11 @@
 			</view>
 			<view class="about_app">
 				{{ $t('home.text4') }}
-				<image src="../../static/index/x.png" mode=""></image>
-				<image src="../../static/index/d.png" mode=""></image>
-				<image src="../../static/index/f.png" mode=""></image>
-				<image src="../../static/index/y.png" mode=""></image>
+				<Webto />
 			</view>
 		</view>
+		
+		<view style="height: 50rpx;" />
 	</view>
 </template>
 
@@ -127,7 +126,7 @@
 	color: #fff;
 	margin: 18rpx 15rpx;
 	background: #021A7E;
-	height: 200px;
+	// height: 200px;
 	padding: 40rpx 30rpx;
 	font-size: 32rpx;
 	.about_btn{
