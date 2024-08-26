@@ -32,7 +32,7 @@
 				<!-- Log in -->
 			</view>
 			<view class="login_acc_psw">
-				<text @click="toBack('/pages/login/register')">{{ $t('login.reg') }}</text>
+				<text @click="toBack('/pages/login/reg')">{{ $t('login.reg') }}</text>
 				<text @click="toBack('/pages/login/retrievepwd')">{{ $t('login.repwd') }}</text>
 			</view>
 		</view>

@@ -32,10 +32,13 @@
 			<view class="idt_about">
 				{{ $t('home.text4') }}
 				
-				<image src="../../static/index/x.png" mode=""></image>
-				<image src="../../static/index/d.png" mode=""></image>
-				<image src="../../static/index/f.png" mode=""></image>
-				<image src="../../static/index/y.png" mode=""></image>
+				<!-- <image @click="toWeb('https://x.com/i/flow/login')" class="x" src="../../static/index/x.png" mode=""></image>
+				<image  class="f" src="../../static/index/f.png" mode=""></image>
+				<image class="y" src="../../static/index/y.png" mode=""></image>
+				<image class="i" src="../../static/index/i.png" mode=""></image>
+				<image class="d" src="../../static/index/d.png" mode=""></image>
+				<image class="z" src="../../static/index/z.png" mode=""></image> -->
+				<Webto />
 			</view>
 		</view>
 		<view class="Our">
@@ -175,7 +178,7 @@
 		methods: {
 			goSignUp(){
 				uni.navigateTo({
-					url: '/pages/login/register'
+					url: '/pages/login/reg'
 				});
 			},
 			handleScroll(e) {
@@ -262,9 +265,7 @@
 	.idt_about{
 		color: #C14EFF;
 		image{
-			width: 26.39rpx;
-			height: 26.39rpx;
-			margin-left: 15rpx;
+			margin-left: 30rpx;
 		}
 	}
 }

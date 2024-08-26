@@ -18,7 +18,7 @@
 				
 				<view class="buY_text1">
 					<view>{{ $t('inbox.act') }}</view>
-					<view class="buY_text1_S">{{(orderVo.price * (User.discount > 0 ? User.discount : 1 )).toFixed(2)}}</view>
+					<view class="buY_text1_S">{{(orderVo.price * (User.discount > 0 ? (User.discount * 0.1) : 1 )).toFixed(2)}}</view>
 				</view>
 			</view>
 		

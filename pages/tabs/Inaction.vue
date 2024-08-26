@@ -11,10 +11,7 @@
 				<view class="Action_body_text">{{ $t('inacX.steptext1') }}</view>
 				<view>{{ $t('inacX.step2') }}</view>
 				<view class="Action_body_app">
-					<image src="../../static/index/x.png" mode=""></image>
-					<image src="../../static/index/d.png" mode=""></image>
-					<image src="../../static/index/f.png" mode=""></image>
-					<image src="../../static/index/y.png" mode=""></image>
+					<Webto />
 				</view>
 				<view class="Action_body_text">{{ $t('inacX.steptext2') }}</view>
 				<view>{{ $t('inacX.step3') }}</view>
@@ -151,7 +148,7 @@
 			},
 			onUpload() {
 				uni.chooseImage({
-					count: 5,
+					count: 1,
 					success: (res) => {
 						const file = res.tempFilePaths
 						file.forEach((filePath) => {
@@ -245,13 +242,11 @@
 			}
 
 			.Action_body_app {
-				text-align: right;
+				// text-align: right;
 				margin: 40rpx 0;
 
 				image {
-					width: 26.39rpx;
-					height: 26.39rpx;
-					margin-left: 15rpx;
+					margin-right: 30rpx;
 				}
 			}
 

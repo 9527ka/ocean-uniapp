@@ -48,7 +48,7 @@
 			}
 		},
 		{
-			"path" : "pages/login/register",
+			"path" : "pages/login/reg",
 			"style" : 
 			{
 				"navigationStyle": "custom"
@@ -161,6 +161,13 @@
 		},
 		{
 			"path" : "pages/inbox/ai",
+			"style" : 
+			{
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/home/webview",
 			"style" : 
 			{
 				"navigationStyle": "custom"

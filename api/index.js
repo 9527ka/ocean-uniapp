@@ -13,7 +13,7 @@ const redirectToLogin = () => {
 		uni.redirectTo({
 		    url: '/pages/login/login' // 替换成你的登录页路径
 		});
-	},2000)
+	},0)
 };
 
 const uploadImage = (filePath) => {
