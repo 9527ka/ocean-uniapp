@@ -66,12 +66,15 @@
 		},
 		methods: {
 			toBack(){
-				uni.navigateBack({
-					delta: 1
-				});
+				const pages = getCurrentPages();
+				if (pages.length > 1) {
+					uni.navigateBack({delta: 1});
+				}else{
+					uni.reLaunch({url: '/pages/tabs/account'});
+				}
 			},
 			async getOrder(){
-				await request('order/list', 'GET', {page_no: this.page_no, page_size: 25}).then(res=>{
+				await request('order/list', 'GET', {page_no: this.page_no, page_size: 6}).then(res=>{
 					this.Order = res.data.data
 					this.OrderList.push(...res.data.data.lists)
 				})

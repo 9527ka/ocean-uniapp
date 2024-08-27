@@ -88,16 +88,28 @@
 			};
 		},
 		onLoad(options){
+			this.getUser()
 			this.User = uni.getStorageSync('User')
 		
 			this.orderVo = JSON.parse(decodeURIComponent(options.data));
-			console.log(this.orderVo)
 		},
 		methods: {
+			// 获取用户信息
+			async getUser(){
+				const token = uni.getStorageSync('token');
+				// token && 
+				await request('user/info', 'GET').then(res=>{
+					this.User = res.data.data
+					uni.setStorageSync('User', res.data.data);
+				})
+			},
 			toBack(){
-				uni.navigateBack({
-					delta: 1
-				});
+				const pages = getCurrentPages();
+				if (pages.length > 1) {
+					uni.navigateBack({delta: 1});
+				}else{
+					uni.reLaunch({url: '/pages/tabs/Inbox'});
+				}
 			},
 			toPage(name,data){
 				uni.navigateTo({

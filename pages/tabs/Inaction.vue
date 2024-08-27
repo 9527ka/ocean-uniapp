@@ -11,6 +11,7 @@
 				<view class="Action_body_text">{{ $t('inacX.steptext1') }}</view>
 				<view>{{ $t('inacX.step2') }}</view>
 				<view class="Action_body_app">
+					{{ $t('home.text4') }}
 					<Webto />
 				</view>
 				<view class="Action_body_text">{{ $t('inacX.steptext2') }}</view>
@@ -242,6 +243,7 @@
 			}
 
 			.Action_body_app {
+				color: #C14EFF;
 				// text-align: right;
 				margin: 40rpx 0;
 

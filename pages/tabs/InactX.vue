@@ -87,7 +87,7 @@
 			},
 			getShare(){
 				request('poster/shareList', 'GET', {
-					page_size: 25,
+					page_size: 6,
 					page_no: this.page_no,
 				}).then(res=>{
 					this.Share = res.data.data

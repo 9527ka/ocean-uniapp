@@ -39,11 +39,7 @@
 			<view class="title_text">
 				<text>{{ $t('acc.title6') }}</text>
 				<view class="title_text_P">
-					<p>{{ $t('acc.title7') }}</p>
-					<p>{{ $t('acc.title8') }}</p>
-					<p>{{ $t('acc.title9') }}</p>
-					<p>{{ $t('acc.title10') }}</p>
-					<p>{{ $t('acc.title11') }}</p>
+					<p v-for="(el,i) in LevesList">{{ replaceString($t('acc.title'+(7+i)), { s1: el.points, s2: el.discount }) }}</p>
 				</view>
 			</view>
 		</view>
@@ -51,23 +47,44 @@
 </template>
 
 <script>
+	import { request } from '@/api/index';
 	export default {
 		data() {
 			return {
-				User: {}
+				User: {},
+				LevesList: []
 			}
 		},
 		onLoad() {
+			this.getLevesList()
 			this.User = uni.getStorageSync('User')
 		},
 		methods: {
 			toBack(){
-				uni.navigateBack({
-					delta: 1
-				});
+				const pages = getCurrentPages();
+				if (pages.length > 1) {
+					uni.navigateBack({delta: 1});
+				}else{
+					uni.reLaunch({url: '/pages/tabs/account'});
+				}
 			},
+			getLevesList(){
+				var that = this
+				request('user/levels', 'GET').then(res=>{
+					that.LevesList = res.data.data
+				})
+			},
+			// 替换字符串中占位符
+			replaceString(template, values) {
+			  Object.keys(values).forEach(key => {
+				template = template.replace(`${key}%`, values[key]);
+			  });
+			  return template;
+			}
 		}
 	}
+	
+	
 </script>
 
 <style lang="scss">

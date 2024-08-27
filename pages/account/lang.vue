@@ -84,9 +84,12 @@
 		},
 		methods: {
 			toBack(){
-				uni.navigateBack({
-					delta: 1
-				});
+				const pages = getCurrentPages();
+				if (pages.length > 1) {
+					uni.navigateBack({delta: 1});
+				}else{
+					uni.reLaunch({url: '/pages/tabs/account'});
+				}
 			},
 			setLang(v) {
 				uni.setStorageSync('lang', v.lang)
