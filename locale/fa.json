@@ -127,5 +127,9 @@
 	"copyC": "Copié avec succès",
 	"copyS": "Échec de la copie",
 	"onBuy": "Vous ne remplissez actuellement pas les conditions d'achat, veuillez partager et revenir plus tard",
-	"onBuyed": "Vous avez déjà acheté aujourd'hui, veuillez revenir demain"
+	"onBuyed": "Vous avez déjà acheté aujourd'hui, veuillez revenir demain",
+	"Home": "Accueil",
+	"InAction": "En Action",
+	"Inbox": "Boîte de réception",
+	"Account": "Compte"
 }

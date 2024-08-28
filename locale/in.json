@@ -127,5 +127,9 @@
 	"copyC": "Berhasil disalin",
 	"copyS": "Gagal menyalin",
 	"onBuy": "Anda saat ini tidak memenuhi syarat untuk membeli, silakan bagikan dan kembali nanti",
-	"onBuyed": "Anda sudah membeli hari ini, silakan kembali besok"
+	"onBuyed": "Anda sudah membeli hari ini, silakan kembali besok",
+	"Home": "Beranda",
+	"InAction": "Dalam Aksi",
+	"Inbox": "Kotak Masuk",
+	"Account": "Akun"
 }

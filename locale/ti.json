@@ -127,5 +127,9 @@
 	"copyC": "Sao chép thành công",
 	"copyS": "Sao chép thất bại",
 	"onBuy": "Hiện tại bạn không đủ điều kiện để mua, vui lòng chia sẻ và quay lại sau",
-	"onBuyed": "Bạn đã mua hàng hôm nay, vui lòng quay lại vào ngày mai"
+	"onBuyed": "Bạn đã mua hàng hôm nay, vui lòng quay lại vào ngày mai",
+	"Home": "Trang chủ",
+	"InAction": "Đang hoạt động",
+	"Inbox": "Hộp thư đến",
+	"Account": "Tài khoản"
 }

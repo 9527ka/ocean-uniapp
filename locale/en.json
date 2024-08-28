@@ -139,5 +139,9 @@
 	"copyC": "Copied successfully",
 	"copyS": "Failed to copy",
 	"onBuy": "You currently do not meet the purchase conditions, please share and come back later",
-	"onBuyed": "You have already purchased today, please come back tomorrow"
+	"onBuyed": "You have already purchased today, please come back tomorrow",
+	"Home": "Home",
+	"InAction": "In Action",
+	"Inbox": "Inbox",
+	"Account": "Account"
 }
