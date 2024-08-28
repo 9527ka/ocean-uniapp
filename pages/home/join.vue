@@ -115,12 +115,13 @@
 		<view class="back-to-top" v-if="showBackToTop" @click="scrollToTop">
 			<image src="../../static/index/to-top.png" mode=""></image>
 		</view>
-		<view class="footer blur">
+		<!-- <view class="footer blur">
 			<image @click="toLaunch('/pages/tabs/home')" class="home" src="../../static/tab/Home_a.png" mode=""></image>
 			<image @click="toLaunch('/pages/tabs/Inaction')" class="action" src="../../static/tab/Action.png" mode=""></image>
 			<image @click="toLaunch('/pages/tabs/Inbox')" class="inbox" src="../../static/tab/Inbox.png" mode=""></image>
 			<image @click="toLaunch('/pages/tabs/account')" class="account" src="../../static/tab/Account.png" mode=""></image>
-		</view>
+		</view> -->
+		<Tabs />
 	</scroll-view>
 </template>
 

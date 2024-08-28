@@ -80,12 +80,13 @@
 			</view>
 			
 		</view>
-		<view class="footer blur">
+		<!-- <view class="footer blur">
 			<image class="home" @click="toLaunch('/pages/tabs/home')" src="../../static/tab/Home.png" mode=""></image>
 			<image @click="toLaunch('/pages/tabs/Inaction')" class="action" src="../../static/tab/Action.png" mode=""></image>
 			<image @click="toLaunch('/pages/tabs/Inbox')" class="inbox" src="../../static/tab/Inbox.png" mode=""></image>
 			<image class="account" src="../../static/tab/Account_a.png" mode=""></image>
-		</view>
+		</view> -->
+		<Tabs :tabs="3" />
 	</view>
 </template>
 

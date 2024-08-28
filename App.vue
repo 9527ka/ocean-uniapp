@@ -1,7 +1,9 @@
 <script>
 	import Vue from 'vue'
 	import Webto from '@/components/Webto.vue'
-	Vue.component('Webto', Webto) // 全局注册组件
+	import Tabs from '@/components/Tabs.vue'
+	Vue.component('Webto', Webto);
+	Vue.component('Tabs', Tabs);
 	export default {
 		// onLaunch: function() {
 		// 	console.log('App Launch')
@@ -103,27 +105,61 @@ body{
 	z-index: 99;
 	position: fixed;
 	bottom: 0;
-	height: 76.39rpx;
+	// height: 76.39rpx;
 	background: rgba(0, 10, 77, .7) !important;
-	padding: 0 60rpx;
+	padding: 10rpx 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	view{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex: 1;
+		text{
+			font-size: 16.67rpx;
+			color: #C9C9C9;
+		}
+		
+		// image{
+		// 	width: 28.47rpx;
+		// 	height: 28.47rpx;
+		// 	margin-bottom: 8rpx;
+		// }
+	}
+	.add{
+		text{
+			color: #09D0BE !important;
+		}
+	}
 	.home{
-		width: 43.75rpx;
-		height: 51.39rpx;
+		image{
+			width: 28.47rpx;
+			height: 29.47rpx;
+			margin-bottom: 8rpx;
+		}
 	}
 	.action{
-		width: 63.89rpx;
-		height: 51.39rpx;
+		image{
+			width: 23.61rpx;
+			height: 29.86rpx;
+			margin-bottom: 8rpx;
+		}
 	}
 	.inbox{
-		width: 38.89rpx;
-		height: 48.61rpx;
+		image{
+			width: 31.25rpx;
+			height: 24.31rpx;
+			margin-bottom: 8rpx;
+		}
 	}
 	.account{
-		width: 62.5rpx;
-		height: 50.76rpx;
+		image{
+			width: 27.08rpx;
+			height: 28.54rpx;
+			margin-bottom: 8rpx;
+		}
 	}
 }
 

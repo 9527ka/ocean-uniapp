@@ -23,12 +23,14 @@
 		</scroll-view>
 		
 		
-		<view class="footer blur">
+		<!-- <view class="footer blur">
 			<image @click="toLaunch('/pages/tabs/home')" class="home" src="../../static/tab/Home.png" mode=""></image>
 			<image @click="toLaunch('/pages/tabs/Inaction')" class="action" src="../../static/tab/Action.png" mode=""></image>
 			<image class="inbox" src="../../static/tab/Inbox_a.png" mode=""></image>
 			<image @click="toLaunch('/pages/tabs/account')" class="account" src="../../static/tab/Account.png" mode=""></image>
-		</view>
+		</view> -->
+		
+		<Tabs :tabs="2" />
 		
 		<view class="back-to-top" v-if="showBackToTop" @click="scrollToTop">
 			<image src="../../static/index/to-top.png" mode=""></image>
