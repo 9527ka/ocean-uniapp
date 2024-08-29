@@ -72,7 +72,7 @@
 			</view>
 		
 			<view class="cpwd_btn" @click="onChangePwd()">
-				<view>Confirm</view>
+				<view>{{ $t('Confirm') }}</view>
 			</view>
 		</view>
 	</view>

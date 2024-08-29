@@ -65,12 +65,10 @@ const uploadImage = (filePath) => {
 
 // 封装请求函数
 const request = (url, method = 'GET', data = {}, headers = {}) => {
-	uni.showLoading({
-		title: "loading..."
-	});
+	uni.showLoading();
 	return new Promise((resolve, reject) => {
         const token = getStorage('token');
-        
+        const lang = getStorage('lang');
         // if (url !== 'login/account' && !token) {
         //     // 如果没有 token，重定向到登录页
         //     redirectToLogin();
@@ -81,7 +79,7 @@ const request = (url, method = 'GET', data = {}, headers = {}) => {
         uni.request({
             url: `${BASE_URL}/api/${url}`,
             method: method,
-            data: {...data, lang: getStorage('lang')},
+            data: {...data, lang},
             header: {
                 'Content-Type': 'application/json',
                 'token': `${token}`, // 将 token 加入请求头
