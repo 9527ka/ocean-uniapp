@@ -12,7 +12,7 @@
 			<view class="card acc_bg">
 				<view class="card_body" v-for="el in OrderList" :key="el.id">
 					<view class="card_box flex">
-						<image class="card_box_le" :src="el.card_img" mode=""></image>
+						<image :class="el.redemption_state == 0 ? 'card_box_le' : 'card_box_le addimge'" :src="el.card_img" mode=""></image>
 						<view class="card_box_ri">
 							<text class="card_box_ri_text">{{el.card_name || ''}}</text>
 							<view class="card_box_ri_text1">
@@ -114,6 +114,9 @@
 </script>
 
 <style lang="scss">
+.addimge{
+	filter: grayscale(100%) brightness(150%) contrast(90%);
+}
 .card{
 	margin: 20rpx 16rpx;
 	box-sizing: border-box;
