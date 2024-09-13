@@ -69,6 +69,7 @@ const request = (url, method = 'GET', data = {}, headers = {}) => {
 	return new Promise((resolve, reject) => {
         const token = getStorage('token');
         const lang = getStorage('lang');
+		// if(lang == '') lang = 'en'
         // if (url !== 'login/account' && !token) {
         //     // 如果没有 token，重定向到登录页
         //     redirectToLogin();

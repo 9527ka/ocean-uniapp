@@ -18,6 +18,12 @@
 </script>
 
 <style lang="scss">
+.idt_about{
+	color: #C14EFF;
+	image{
+		// margin-left: 30rpx;
+	}
+}
 body{
 	background: #121947;
 	font-family:"PingFang SC", sans-serif;

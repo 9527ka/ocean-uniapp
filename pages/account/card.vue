@@ -32,12 +32,12 @@
 					<view class="card_box_code" v-if="el.state == 1">
 						<view>
 							<text>{{ $t('acc.card6') }}{{el.serial_number}}</text>
-							<image @click="copyText(el.serial_number)" src="../../static/my/fuzhi@2x.png" mode=""></image>
+							<image v-if="el.redemption_state == 0" @click="copyText(el.serial_number)" src="../../static/my/fuzhi@2x.png" mode=""></image>
 						</view>
 						
 						<view>
 							<text>{{ $t('acc.card7') }}{{el.cdk}}</text>
-							<image @click="copyText(el.cdk)" src="../../static/my/fuzhi@2x.png" mode=""></image>
+							<image v-if="el.redemption_state == 0" @click="copyText(el.cdk)" src="../../static/my/fuzhi@2x.png" mode=""></image>
 						</view>
 					</view>
 				</view>

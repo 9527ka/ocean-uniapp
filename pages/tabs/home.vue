@@ -31,13 +31,6 @@
 			</view>
 			<view class="idt_about">
 				{{ $t('home.text4') }}
-				
-				<!-- <image @click="toWeb('https://x.com/i/flow/login')" class="x" src="../../static/index/x.png" mode=""></image>
-				<image  class="f" src="../../static/index/f.png" mode=""></image>
-				<image class="y" src="../../static/index/y.png" mode=""></image>
-				<image class="i" src="../../static/index/i.png" mode=""></image>
-				<image class="d" src="../../static/index/d.png" mode=""></image>
-				<image class="z" src="../../static/index/z.png" mode=""></image> -->
 				<Webto />
 			</view>
 		</view>
@@ -224,6 +217,7 @@
 </script>
 
 <style lang="less">
+// .idt_about{margin-top:20rpx;}
 .top{
 	background: url('../../static/index/top.png') no-repeat;
 	background-size: cover;
@@ -241,9 +235,9 @@
 .idt{
 	background: url('../../static/index/shui.png') no-repeat;
 	background-size: cover;
-	min-height: 720.14rpx;
+	min-height: 706.14rpx;
 	background-position: bottom;
-	padding: 50rpx 40rpx;
+	padding: 70rpx 40rpx;
 	color: #fff;
 	// margin-top: -20px;
 	display: flex;
@@ -263,12 +257,6 @@
 		text-align: center;
 		line-height: 88.89rpx;
 		margin: 47rpx 0 35rpx;
-	}
-	.idt_about{
-		color: #C14EFF;
-		image{
-			margin-left: 30rpx;
-		}
 	}
 }
 .Our{

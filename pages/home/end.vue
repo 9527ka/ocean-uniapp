@@ -18,12 +18,13 @@
 			<view class="about_text_sa">
 				<text>{{ $t('home.home')}}</text>  {{ $t('home.end1') }}
 			</view>
-			<view class="about_app flex">
+			<view class="about_text_p idt_about">
+				{{ $t('home.text4') }}
 				<Webto />
 			</view>
 			
 			<view class="end_text"> {{ $t('home.end2') }}</view>
-			<view class="end_btn"> {{ $t('home.end3') }}</view>
+			<view class="end_btn" @click="toPage('/pages/home/join')"> {{ $t('home.end3') }}</view>
 		</view>
 		
 		<view class="end_list">
@@ -201,7 +202,7 @@
 		}
 	}
 	.about_text_p{
-		padding: 40rpx 18rpx 50rpx;
+		padding: 40rpx 0rpx 30rpx;
 		font-size: 29.17rpx;
 		line-height: 42rpx;
 	}
@@ -210,7 +211,7 @@
 .end_text{
 	font-size: 29.17rpx;
 	text-align: center;
-	padding: 100rpx 0 40rpx;
+	padding: 40rpx 0 40rpx;
 }
 .end_btn{
 	padding: 0 40rpx ;

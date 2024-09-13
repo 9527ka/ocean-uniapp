@@ -18,11 +18,10 @@
 			<view class="about_text_sa">
 				<text>{{ $t('home.home')}}</text> {{ $t('home.mar1') }}
 			</view>
-			<view class="about_app flex">
+			<view class="about_text_p idt_about">
+				{{ $t('home.text4') }}
 				<Webto />
 			</view>
-		
-			
 			<!-- <view class="mar_text">
 				{{ $t('home.mar2') }}
 			</view> -->
@@ -167,7 +166,9 @@
 		computed: {
 		    formattedContent() {
 		      if (this.content) {
-		              return this.content.replace(/<img/g, '<img style="width:100%;margin: 10px 0;height:auto;display:block;"');
+		              return this.content
+		                  .replace(/\<video/gi, "<video style='width:100%;height:300rpx;'")
+		                  .replace(/<img/g, '<img style="width:100%;margin: 10px 0;height:auto;display:block;"');
 				} else {
 				  return ''; // 如果 content 为空，返回一个空字符串
 				}
@@ -240,7 +241,7 @@
 		}
 	}
 	.about_text_p{
-		padding: 40rpx 18rpx 50rpx;
+		padding: 40rpx 0rpx 30rpx;
 		font-size: 29.17rpx;
 		line-height: 42rpx;
 	}
