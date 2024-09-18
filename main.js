@@ -9,6 +9,7 @@ import hd from './locale/hd.json'
 import ko from './locale/ko.json'
 import ta from './locale/ta.json'
 import In from './locale/in.json'
+import cn from './locale/cn.json'
 const messages = {
 	en,
 	ja,
@@ -17,7 +18,8 @@ const messages = {
 	hd,
 	ko,
 	ta,
-	in: In
+	in: In,
+	cn,
 }
 
 let i18nConfig = {

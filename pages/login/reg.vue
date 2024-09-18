@@ -57,13 +57,13 @@
 					/>
 				</view>
 				
-				<view class="login_from_box mt30">
+				<!-- <view class="login_from_box mt30">
 					<input 
 						placeholder-class= "login_from_box_pl" 
 						:placeholder="$t('login.phone')"
 						v-model="from.phone_number"
 					/>
-				</view>
+				</view> -->
 				
 				<view class="login_from_box mt30">
 					<input 
@@ -76,10 +76,6 @@
 						:src="require('../../static/my/emaile.png')" 
 						mode=""
 					></image> -->
-					<view class="newCode" @click="onEmail">
-						<!-- Get Code -->
-						{{ $t('login.getCode') }}
-					</view>
 				</view>
 				
 				<view class="login_from_box mt30">
@@ -88,6 +84,10 @@
 						:placeholder="$t('login.code')"
 						v-model="from.code"
 					/>
+					<!-- <view class="newCode" @click="onEmail">
+						{{ getCodeText }}
+					</view> -->
+					<view class="newCode" @click="onEmail">{{ getCodeTxt }}</view>
 				</view>
 				
 				<view class="login_from_box mt30">
@@ -111,6 +111,9 @@
 	export default {
 		data() {
 			return {
+				getCodeTxt: '',
+				isDisabled: false,        // 按钮是否不可点击
+				countdown: 60,
 				ispwd: true,
 				iscnfpwd: true,
 				
@@ -119,7 +122,7 @@
 					password: '',
 					password_confirm: '',
 					full_name: '',
-					phone_number: '',
+					phone_number: 'null',
 					email: '',
 					channel: 1,
 					code: '',
@@ -129,6 +132,11 @@
 		},
 		onLoad(options) {
 			this.from.invitation_code = options?.code || ''
+			if (this.isDisabled) {
+				this.getCodeTxt = `${this.countdown}s`;
+			} else {
+				this.getCodeTxt = this.$t('login.getCode');
+			}
 		},
 		methods: {
 			toBack(){
@@ -155,6 +163,7 @@
 				})
 			},
 			onEmail() {
+				if (this.isDisabled) return;
 				let { email } = this.from
 				if(email){
 					request('login/sendCode', 'POST',{email}).then(res=>{
@@ -164,6 +173,7 @@
 							mask: true,
 							icon: "none"
 						});
+						this.startCountdown();
 					})
 				}else{
 					uni.showToast({	
@@ -174,9 +184,22 @@
 						icon: "none"
 					});
 				}
+			},
+			// 开始倒计时
+			startCountdown() {
+			  this.isDisabled = true; // 按钮变为不可点击
+			  const timer = setInterval(() => {
+				this.countdown--;
+				this.getCodeTxt = `${this.countdown}s`;
+				if (this.countdown <= 0) {
+					this.getCodeTxt = this.$t('login.getCode');
+					clearInterval(timer); // 倒计时结束，清除定时器
+					this.isDisabled = false; // 恢复按钮可点击状态
+					this.countdown = 60; // 重置倒计时
+				}
+			  }, 1000); // 每隔 1 秒更新一次
 			}
 		}
-		
 	}
 </script>
 

@@ -29,6 +29,7 @@
 	export default {
 		data() {
 			return {
+				act:'',
 				langList: [
 					{
 						url: require('../../static/lang/English.png'),
@@ -79,8 +80,19 @@
 						lang: 'ja',
 						langName: 'Japan'
 					},
+					{
+						url: require('../../static/lang/Chinese.png'),
+						name: '中文繁体',
+						lang: 'cn',
+						langName: 'Chinese'
+					},
 				]
 			};
+		},
+		onLoad(option){
+			if(option.act){
+				this.act = option.act
+			}
 		},
 		methods: {
 			toBack(){
@@ -96,9 +108,16 @@
 				uni.setStorageSync('langName', v.name)
 				uni.setStorageSync('langUrl', v.langName)
 				this.$newLang(v.lang);
-				uni.reLaunch({
-					url: `/pages/tabs/home`
-				});
+				
+				if(this.act){
+					uni.reLaunch({
+						url: `/pages/login/login`
+					});
+				}else{
+					uni.reLaunch({
+						url: `/pages/tabs/home`
+					});
+				}
 			}
 		}
 	}

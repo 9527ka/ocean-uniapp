@@ -1,5 +1,12 @@
 <template>
-	<view class="content">
+	<view class="content header">
+		<view class="header_ri">
+		<view class="header_ri_lang" @click="toPage('/pages/account/lang')">
+			<image :src="require(`../../static/lang/${langUrl || 'English'}.png`)" mode=""></image>
+			<text>{{lang || 'English'}}</text>
+			<svg t="1722838597937" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5086" width="200" height="200"><path d="M246.784 336.457143h530.432a14.628571 14.628571 0 0 1 12.214857 22.674286l-265.289143 397.897142a14.628571 14.628571 0 0 1-24.283428 0L234.569143 359.131429a14.628571 14.628571 0 0 1 12.214857-22.674286z" p-id="5087" fill="#ffffff"></path></svg>
+		</view>
+		</view>
 		<view class="login">
 			<image @click="toBack('/pages/tabs/home')" class="login_logo" src="../../static/my/loginLogo.png" mode=""></image>
 			<view class="login_from">
@@ -44,12 +51,24 @@
 	export default {
 		data() {
 			return {
+				lang: 'English',
+				langUrl: 'English',
 				account: '',
 				password: '',
 				ispwd: true,
 			};
 		},
+		onShow(){
+			this.lang = uni.getStorageSync('langName');
+			this.langUrl = uni.getStorageSync('langUrl');
+		},
 		methods: {
+			toPage(name,data){
+				data = 'act=/pages/login/login'
+				uni.navigateTo({
+					url: `${name}${data ? '?' : ''}${data || ''}`
+				});
+			},
 			toBack(name){
 				uni.navigateTo({
 					url: `${name}`
@@ -80,6 +99,11 @@
 </script>
 
 <style lang="scss">
+.header_ri{
+	position: fixed;
+	right: 10px;
+	top: 30px;
+}
 .login{
 	width: 100%;
 	height: 100%;

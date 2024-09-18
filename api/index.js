@@ -1,5 +1,5 @@
 
-const BASE_URL = 'https://a.yuejie.online';
+const BASE_URL = 'https://system.qianduanceshi.net';
 
 // 获取本地存储中的 token
 const getStorage = (v = 'token') => {
@@ -68,8 +68,9 @@ const request = (url, method = 'GET', data = {}, headers = {}) => {
 	uni.showLoading();
 	return new Promise((resolve, reject) => {
         const token = getStorage('token');
-        const lang = getStorage('lang');
-		// if(lang == '') lang = 'en'
+        var lang = getStorage('lang');
+		//if(!lang) uni.setStorageSync('lang', 'en');
+		if(!lang) lang = 'en'
         // if (url !== 'login/account' && !token) {
         //     // 如果没有 token，重定向到登录页
         //     redirectToLogin();
