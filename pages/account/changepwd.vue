@@ -67,8 +67,6 @@
 						></image>
 					</view>
 				</view>
-				
-				
 			</view>
 		
 			<view class="cpwd_btn" @click="onChangePwd()">
@@ -113,6 +111,9 @@
 						mask: true,
 						icon: "none"
 					});
+					setTimeout(()=>{
+						uni.reLaunch({url: '/pages/login/login'});
+					},1500)
 					this.old_password = ''
 					this.new_password = ''
 					this.password_confirm = ''

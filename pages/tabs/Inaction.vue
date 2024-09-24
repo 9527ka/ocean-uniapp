@@ -193,7 +193,7 @@
 					this.uploadedImages = []
 					
 					setTimeout(()=>{
-						this.toLaunch('/pages/tabs/InactX')
+						this.toLaunch('/pages/tabs/Inbox')
 					},1500)
 				})
 			},
