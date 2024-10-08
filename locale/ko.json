@@ -132,5 +132,7 @@
 	"InAction": "작업 중",
 	"Inbox": "받은 편지함",
 	"Account": "계정",
-	"Confirm": "확인하다"
+	"Confirm": "확인하다",
+	"acc.card_passed":"거절 이유",
+	"acc.card_faild":"거절"
 }

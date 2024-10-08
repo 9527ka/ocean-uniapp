@@ -132,5 +132,7 @@
 	"InAction": "कार्रवाई में",
 	"Inbox": "इनबॉक्स",
 	"Account": "खाता",
-	"Confirm": "पुष्टि करना"
+	"Confirm": "पुष्टि करना",
+	"acc.card_passed":"अस्वीकरण का कारण",
+	"acc.card_faild":"अस्वीकरण"
 }

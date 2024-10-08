@@ -132,5 +132,7 @@
 	"InAction": "Đang hoạt động",
 	"Inbox": "Hộp thư đến",
 	"Account": "Tài khoản",
-	"Confirm": "xác nhận"
+	"Confirm": "xác nhận",
+	"acc.card_passed":"Lý do từ chối",
+	"acc.card_faild":"Từ chối"
 }

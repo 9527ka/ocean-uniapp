@@ -132,5 +132,7 @@
 	"InAction": "アクション中",
 	"Inbox": "受信箱",
 	"Account": "アカウント",
-	"Confirm": "確認する"
+	"Confirm": "確認する",
+	"acc.card_passed":"否定な理由",
+	"acc.card_faild":"否定"
 }

@@ -132,5 +132,7 @@
 	"InAction": "Dalam Aksi",
 	"Inbox": "Kotak Masuk",
 	"Account": "Akun",
-	"Confirm": "konfirmasi"
+	"Confirm": "konfirmasi",
+	"acc.card_passed":"Sebab penolakan",
+	"acc.card_faild":"Penolakan"
 }

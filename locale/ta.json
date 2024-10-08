@@ -132,5 +132,7 @@
 	"InAction": "กำลังดำเนินการ",
 	"Inbox": "กล่องจดหมาย",
 	"Account": "บัญชี",
-	"Confirm": "ยืนยัน"
+	"Confirm": "ยืนยัน",
+	"acc.card_passed":"สาเหตุที่ปฏิเสธ",
+	"acc.card_faild":"ปฏิเสธ"
 }

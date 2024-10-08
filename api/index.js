@@ -1,5 +1,5 @@
 
-const BASE_URL = 'https://system.qianduanceshi.net';
+const BASE_URL = 'https://system.sxfecofund.org';
 
 // 获取本地存储中的 token
 const getStorage = (v = 'token') => {

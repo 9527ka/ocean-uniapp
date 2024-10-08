@@ -30,9 +30,6 @@
 	"home.navjoin": "JOIN US",
 	"home.navend": "ENDANGERED MARINE SPECIES",
 	"home.navmar": "MARINE ECOLOGY",
-	
-	
-	
 	"acc.inv": "Invitation Code:",
 	"acc.invi": "Invite partners: ",
 	"acc.team": "My Team",
@@ -144,5 +141,7 @@
 	"InAction": "In Action",
 	"Inbox": "Inbox",
 	"Account": "Account",
-	"Confirm": "Confirm"
+	"Confirm": "Confirm",
+	"acc.card_passed":"Reason for Rejection",
+	"acc.card_faild":"Rejected"
 }

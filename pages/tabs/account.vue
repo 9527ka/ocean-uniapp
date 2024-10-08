@@ -67,13 +67,13 @@
 					<svg t="1722913328067" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4259" width="200" height="200"><path d="M300.032 884.736c-7.68 8.704-11.776 20.48-11.264 32.256 0.512 11.776 6.144 23.04 14.848 30.72 18.432 16.384 47.104 14.848 63.488-3.584l355.328-396.8c18.432-20.48 18.432-51.2 0-71.168L367.616 79.36c-16.384-18.432-45.056-19.968-63.488-3.584-8.704 7.68-14.336 18.944-14.848 30.72-0.512 11.776 3.584 23.552 11.264 32.256l333.824 372.736-334.336 373.248z" fill="#ffffff" p-id="4260"></path></svg>
 				</view>
 				
-				<!-- <view class="accpage_list_box flex"  @click="toPage('/pages/account/cea')">
+				<view class="accpage_list_box flex"  @click="toPage('/pages/account/cea')">
 					<view class="accpage_list_box_text">
 						<image src="../../static/my/user/Delete Account@2x.png" mode=""></image>
 						<text>{{ $t('acc.dacc') }}</text>
 					</view>
 					<svg t="1722913328067" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4259" width="200" height="200"><path d="M300.032 884.736c-7.68 8.704-11.776 20.48-11.264 32.256 0.512 11.776 6.144 23.04 14.848 30.72 18.432 16.384 47.104 14.848 63.488-3.584l355.328-396.8c18.432-20.48 18.432-51.2 0-71.168L367.616 79.36c-16.384-18.432-45.056-19.968-63.488-3.584-8.704 7.68-14.336 18.944-14.848 30.72-0.512 11.776 3.584 23.552 11.264 32.256l333.824 372.736-334.336 373.248z" fill="#ffffff" p-id="4260"></path></svg>
-				</view> -->
+				</view>
 				
 				<view class="accpage_list_btn" @click="toUser()">{{ $t('acc.signout') }}</view>
 				<view style="height: 40rpx;"></view>

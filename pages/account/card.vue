@@ -22,7 +22,7 @@
 							</view>
 							<view class="card_box_ri_btn">
 								<view :class="el.state == 0 ? 'yellow' : el.state == 1 ? '' : 'red' ">
-									{{ el.state == 0 ? $t('acc.card4') : $t('acc.card5') }}
+									{{ el.state == 0 ? $t('acc.card4') : el.state == 1 ? $t('acc.card5') : $t('acc.card_faild') }}
 								</view>
 							</view>
 						</view>
@@ -39,6 +39,9 @@
 							<text>{{ $t('acc.card7') }}{{el.cdk}}</text>
 							<image v-if="el.redemption_state == 0" @click="copyText(el.cdk)" src="../../static/my/fuzhi@2x.png" mode=""></image>
 						</view>
+					</view>
+					<view class="card_box_code">
+						<text>{{ $t('acc.card_passed') }}: {{el.remark}}</text>
 					</view>
 				</view>
 				

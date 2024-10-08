@@ -47,7 +47,7 @@
 	"acc.card3": "日期：",
 	"acc.card4": "審核中",
 	"acc.card5": "已通過",
-	"acc.card6": "審核中：",
+	"acc.card6": "卡號：",
 	"acc.card7": "啟動碼：",
 	"acc.acc1": "帳戶取消",
 	"acc.acc2": "請輸入密碼",
@@ -141,5 +141,7 @@
 	"InAction": "行動中",
 	"Inbox": "收件箱",
 	"Account": "帳戶",
-	"Confirm": "確認"
+	"Confirm": "確認",
+	"acc.card_passed":"拒絕原因",
+	"acc.card_faild":"拒絕"
 }

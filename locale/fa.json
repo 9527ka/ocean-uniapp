@@ -132,5 +132,7 @@
 	"InAction": "En Action",
 	"Inbox": "Boîte de réception",
 	"Account": "Compte",
-	"confirm": "Confirmer"
+	"confirm": "Confirmer",
+	"acc.card_passed":"Raison de refus",
+	"acc.card_faild":"Refus"
 }
